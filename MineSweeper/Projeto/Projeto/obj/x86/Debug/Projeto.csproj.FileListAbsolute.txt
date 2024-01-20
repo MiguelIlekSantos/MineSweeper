@@ -1,0 +1,24 @@
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+C:\Users\Aluno\Desktop\Miguel Escola\tecnologia\LPR\11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Aluno\Desktop\Repositórios GITHUB\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
