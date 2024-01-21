@@ -70,7 +70,8 @@
 
 ### Tools
 
-<p dir="auto"><a href="https://code.visualstudio.com/" rel="nofollow"><img alt="Vscode" width="100" height="50" src="https://github.com/MiguelIlekSantos/MineSweeper/assets/138301252/3bec3cc3-7248-4318-a70a-491dd022c0e6" style="max-width: 100%;"></a>
+
+<p dir="auto"><a href="https://code.visualstudio.com/" rel="nofollow"><img alt="Vscode" width="100" height="50" src="https://github.com/MiguelIlekSantos/MineSweeper/assets/138301252/7cba099c-0e6a-4479-9efa-fd852797fac8" style="max-width: 100%;"></a>
 <a href="https://git-scm.com/" rel="nofollow"><img alt="Git" width="50" height="50" src="https://github.com/MiguelIlekSantos/russian-alphabet-game/assets/138301252/9652960c-8fb4-42e2-a9b6-c587fe9f7a15" style="max-width: 100%;"></a></p>
 
 <br>
