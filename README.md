@@ -49,11 +49,10 @@
 ## Language
 
 <p dir="auto"><a href="https://www.typescriptlang.org/" rel="nofollow"> 
-   <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" rel="nofollow"><img alt="NextJS" width="50" height="50" src="https://camo.githubusercontent.com/6487cfe968d9e145c64087ba0095dfd6b8349167b6a1473395a2e88924d6729d/68747470733a2f2f6769746875622d70726f64756374696f6e2d757365722d61737365742d3632313064662e73332e616d617a6f6e6177732e636f6d2f35393839323336382f3235373330383837392d30616138653033322d343837372d343131642d383465342d6135616137346639323463622e737667" data-canonical-src="https://github-production-user-asset-6210df.s3.amazonaws.com/59892368/257308879-0aa8e032-4877-411d-84e4-a5aa74f924cb.svg" style="max-width: 100%;"></a>
-   <br>
-   <img src="https://camo.githubusercontent.com/6a75b351a5fb2e6252687525381c47674a6edcaf514d006fe1d66a7798789105/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4a6176617363726970742d2f3f6c6f676f3d54797065536372697074266c6f676f436f6c6f723d776869746526636f6c6f723d79656c6c6f77" alt="Alt ou título da imagem" data-canonical-src="https://img.shields.io/badge/-Javascript-/?logo=TypeScript&amp;logoColor=white&amp;color=yellow" style="max-width: 100%;"></a></p>
+   <img  height="250" alt="C#" title="C#" src="https://github.com/MiguelIlekSantos/MineSweeper/assets/138301252/3432e1aa-4f18-48c4-b095-8532009a0b67" />
+</p>
 <ul dir="auto">
-   <li><code>DOM manipulation</code> (Access that javascript has to HTML5 tree elements. Having access to divs, for example, to delete, add elements, etc.)</li>
+
    <br>
    <li><code>Methods</code>
       <ul dir="auto">
@@ -69,34 +68,9 @@
    </li>
 </ul>
 
-## Style
-
-<p dir="auto"><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" rel="nofollow"> 
-      <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" rel="nofollow"><img alt="TypeScript" width="50" height="50" 
-src="https://camo.githubusercontent.com/92dc8e4a52f9b517fc80f4c8886065e441fe514003eedd2cee34f9b63362aec8/68747470733a2f2f6769746875622d70726f64756374696f6e2d757365722d61737365742d3632313064662e73332e616d617a6f6e6177732e636f6d2f35393839323336382f3235373330383735392d38336232376461312d643935632d346530392d393833362d3639366334363665333539372e737667" data-canonical-src="https://github-production-user-asset-6210df.s3.amazonaws.com/59892368/257308759-83b27da1-d95c-4e09-9836-696c466e3597.svg" style="max-width: 100%;"></a>
-   <br>
-   <img src="https://camo.githubusercontent.com/b925d0ba86bf1994b7609038f2fe12745793463aa59db8543f6efca85dfcecf9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d435353332d2f3f6c6f676f3d43535333266c6f676f436f6c6f723d776869746526636f6c6f723d626c7565" alt="Alt ou título da imagem" data-canonical-src="https://img.shields.io/badge/-CSS3-/?logo=CSS3&amp;logoColor=white&amp;color=blue" style="max-width: 100%;"></a></p>
-<ul dir="auto">
-   
-<li><code>Basic features</code> (display (Flex e Grid), flex-direction, height, width, border-radius... )</li>
-</ul>
-
-## Markup Language
-
-
-<p dir="auto"><a href="https://nextjs.org" rel="nofollow"> 
-   <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" rel="nofollow"><img alt="HTML5" width="50" height="50" src="https://user-images.githubusercontent.com/59892368/222955162-5b69600b-8953-45bd-9144-56fb3491d54e.svg" style="max-width: 100%;"></a>
-   <br>
-   <img src="https://camo.githubusercontent.com/1580f1a2f213addd7a1a3f138b1d5aef708322700c6966fb71d260a935151d51/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d48544d4c352d2f3f6c6f676f3d48544d4c35266c6f676f436f6c6f723d776869746526636f6c6f723d6f72616e6765" alt="Alt ou título da imagem" data-canonical-src="https://img.shields.io/badge/-HTML5-/?logo=HTML5&amp;logoColor=white&amp;color=orange" style="max-width: 100%;"></a></p>
-<ul dir="auto">
-   
-   
-<li><a href="https://chakra-ui.com/docs/styled-system/style-props" rel="nofollow"><code>Tags</code></a></li>
-</ul>
-
 ### Tools
 
-<p dir="auto"><a href="https://code.visualstudio.com/" rel="nofollow"><img alt="Vscode" width="50" height="50" src="https://user-images.githubusercontent.com/59892368/223381414-d3066c8b-c3ee-4fae-943d-481857e88000.svg" style="max-width: 100%;"></a>
+<p dir="auto"><a href="https://code.visualstudio.com/" rel="nofollow"><img alt="Vscode" width="50" height="50" src="https://github.com/MiguelIlekSantos/MineSweeper/assets/138301252/3bec3cc3-7248-4318-a70a-491dd022c0e6" style="max-width: 100%;"></a>
 <a href="https://git-scm.com/" rel="nofollow"><img alt="Git" width="50" height="50" src="https://github.com/MiguelIlekSantos/russian-alphabet-game/assets/138301252/9652960c-8fb4-42e2-a9b6-c587fe9f7a15" style="max-width: 100%;"></a></p>
 
 <br>
