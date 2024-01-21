@@ -56,14 +56,12 @@
    <br>
    <li><code>Methods</code>
       <ul dir="auto">
-         <li><code>Math.floor(value) :</code> This method is used to return the closest value of `value` before `value` in terms of less than or equal.</li> <br>
-         <li><code>Math.random() :</code> This method is used to return a random number between 0 (inclusive) and 1 (exclusive). </li> <br>
-         <li><code>.add(...items) :</code> This method is used to add one or more elements to an array. It returns a new array with the added elements.</li> <br>
-         <li><code>.contains() :</code> This method is used to check whether an array contains a particular element. It returns `true` if the element is found, `false` otherwise.</li> <br>
-         <li><code>.remove() :</code> This method is used to remove an element from an array.</li> <br>
-         <li><code>setTimeout(callback[, delay]) :</code> This method is used to schedule a function to be executed after a certain delay in milliseconds.</li> <br>
-         <li><code>setInterval(callback[, delay]) :</code> This method is used to schedule the execution of a function at regular intervals in milliseconds.</li> <br>
-         <li><code>.click(element) :</code> This method is used to simulate clicking an HTML element. It is used to select an HTML element and perform click action on it.</li> <br>
+         <li><code>random.Next(0, 6) :</code> This method is used to return a random number between 0 (inclusive) and 6 (exclusive). </li> <br>
+         <li><code>.ToString() :</code> This method is used to convert some value to string.</li> <br>
+         <li><code>.Add() :</code> This method is used to add dynamically created objects to the window.</li> <br>
+         <li><code>.Restart() :</code> This method is used to restart the apllication after being completed.</li> <br>
+         <li><code>.Exit() :</code> This method is used to get out of the apllication after being completed or losing.</li> <br>
+         <li><code>.Show() :</code> This method is used to show a message box.</li> <br>
       </ul>
    </li>
 </ul>
@@ -80,15 +78,13 @@
 
 This game is completed, but I am planning to make upgrades in future. This upgrades includes : 
 
-1. Make it responsive for mobile phones :iphone:
-2. Add explosion effects :fire:
-3. Create a second version of this game, where instead of phonemes we need write words
+1. Fix the problem of possibly losing on the first click :bomb:
 
 <br>
 
 ## Why ? :bulb:
 
-The main inspiration for this game was the game _Flippy Bit And The Attack Of The Hexadecimals From Base 16_.
+The main inspiration for this was the game _MineSweeper_.
 <br>
-Which you can find by this link : [Click here !](https://flippybitandtheattackofthehexadecimalsfrombase16.com)
+Which you can find by this link : [Click here !](https://www.google.com/search?client=opera-gx&q=campo+minado&sourceid=opera&ie=UTF-8&oe=UTF-8)
 
