@@ -2,7 +2,8 @@
 
 <p align="center">
    <br>
-   <img  height="250" alt="RussianAlfhabetGame" title="RussianAlfhabetGame" src="https://github.com/MiguelIlekSantos/russian-alphabet-game/assets/138301252/e5df9ece-87a6-4da5-a436-c94341742159" />
+
+   <img  height="250" alt="MineSweeper" title="MineSweeper" src="https://github.com/MiguelIlekSantos/MineSweeper/assets/138301252/69f85b97-976a-4558-aa63-c174cb425e8d" />
    <br>
    <i>
         Find all the numbers and be careful not to click on any bombs !
