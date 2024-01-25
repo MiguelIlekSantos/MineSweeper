@@ -22,3 +22,11 @@ C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\o
 C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\migue\OneDrive\Documentos\GitHub\c-Sharp\Mine Whisper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache

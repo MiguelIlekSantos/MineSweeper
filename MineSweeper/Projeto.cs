@@ -24,8 +24,6 @@ namespace WindowsFormsApplication1
         Color colorThird;
         Color colorFourth;
 
-        bool flags = false;
-
         int tamanhoBtnAndSpace = 40;
         int spaceBetweenBtns = 32;
 
@@ -50,7 +48,7 @@ namespace WindowsFormsApplication1
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    matriz[i, j] = random.Next(0, 6);
+                    matriz[i, j] = random.Next(0, 5);
                 }
             }
 
@@ -66,6 +64,10 @@ namespace WindowsFormsApplication1
 
                     Button novoBotao = new Button();
                     novoBotao.Text = numbers(a, b).ToString();
+                    if (novoBotao.Text == "0")
+                    {
+                        novoBotao.Text = " ";
+                    }
 
                     if (a % 2 == 0 && b % 2 != 0 || a % 2 == 1 && b % 2 == 0)
                     {
@@ -81,7 +83,7 @@ namespace WindowsFormsApplication1
                     novoBotao.Size = new System.Drawing.Size(tamanhoBtnAndSpace, tamanhoBtnAndSpace);
 
                     novoBotao.Location = new System.Drawing.Point(posX, posY);
-                    novoBotao.Click += new EventHandler(BotaoClicado);
+                    novoBotao.MouseDown += new MouseEventHandler(BotaoClicado);
                     novoBotao.Tag = new Coordenadas { X = a, Y = b };
                     bool isBold = novoBotao.Font.Bold;
                     novoBotao.Font = new Font(novoBotao.Font, novoBotao.Font.Style | FontStyle.Bold);
@@ -137,14 +139,14 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void BotaoClicado(object sender, EventArgs e)
+        private void BotaoClicado(object sender, MouseEventArgs e)
         {
 
             Coordenadas coordenadas = (Coordenadas)((Button)sender).Tag;
             int posicaoX = coordenadas.X;
             int posicaoY = coordenadas.Y;
 
-            if (flags)
+            if (e.Button == MouseButtons.Right)
             {
                 if (((Button)sender).ForeColor != Color.Black)
                 {
@@ -169,9 +171,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            else if (((Button)sender).BackColor != Color.Red)
-            {
 
+            if (e.Button == MouseButtons.Left && ((Button)sender).ForeColor != Color.Red)
+            {
                 if (((Button)sender).Text == "-1")
                 {
                     DialogResult resposta;
@@ -185,7 +187,7 @@ namespace WindowsFormsApplication1
                         Application.Exit();
                     }
                 }
-                else if (((Button)sender).Text != "-1" && ((Button)sender).Text != "0")
+                else if (((Button)sender).Text != "-1" && ((Button)sender).Text != " ")
                 {
 
                     if (posicaoX % 2 == 0 && posicaoY % 2 != 0 || posicaoX % 2 == 1 && posicaoY % 2 == 0)
@@ -202,7 +204,7 @@ namespace WindowsFormsApplication1
 
                     verifyWinning();
                 }
-                else if (((Button)sender).Text == "0")
+                else if (((Button)sender).Text == " ")
                 {
 
                     ((Button)sender).ForeColor = Color.Black;
@@ -220,6 +222,21 @@ namespace WindowsFormsApplication1
 
                     openEveryZero(posicaoX, posicaoY);
 
+                }
+            }
+
+            if (e.Button == MouseButtons.Middle)
+            {
+                int numMarks = middleClickCondition(posicaoX, posicaoY);
+                if (((Button)sender).Text == " ")
+                {
+                    return;
+                }
+                int numBombsAround = Convert.ToInt32(((Button)sender).Text);
+
+                if (numMarks == numBombsAround)
+                {
+                    middleClickAction(posicaoX, posicaoY);
                 }
 
             }
@@ -250,7 +267,7 @@ namespace WindowsFormsApplication1
                         }
 
                         verifyWinning();
-                        if (buttons[i, j].Text == "0")
+                        if (buttons[i, j].Text == " ")
                         {
                             openEveryZero(i, j);
                         }
@@ -293,24 +310,58 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+
             return minearound;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private int middleClickCondition(int posicaoY, int posicaoX)
         {
-            if (!flags)
+            int minearound = 0;
+
+            if (buttons[posicaoY, posicaoX].ForeColor == Color.Red)
             {
-                flags = true;
-                ((Button)sender).BackColor = Color.Green;
-                ((Button)sender).ForeColor = Color.White;
+                return 0;
             }
-            else
+
+            int startY = (posicaoY == 0) ? 0 : posicaoY - 1;
+            int endY = (posicaoY == 19) ? 19 : posicaoY + 1;
+            int startX = (posicaoX == 0) ? 0 : posicaoX - 1;
+            int endX = (posicaoX == 19) ? 19 : posicaoX + 1;
+
+            for (int i = startY; i <= endY; i++)
             {
-                flags = false;
-                ((Button)sender).BackColor = Color.White;
-                ((Button)sender).ForeColor = Color.Black;
+                for (int j = startX; j <= endX; j++)
+                {
+                    if (buttons[i, j].ForeColor == Color.Red)
+                    {
+                        minearound++;
+                    }
+                }
             }
+            return minearound;
+
         }
+        private void middleClickAction(int posicaoY, int posicaoX)
+        {
+            int startY = (posicaoY == 0) ? 0 : posicaoY - 1;
+            int endY = (posicaoY == 19) ? 19 : posicaoY + 1;
+            int startX = (posicaoX == 0) ? 0 : posicaoX - 1;
+            int endX = (posicaoX == 19) ? 19 : posicaoX + 1;
+
+            for (int i = startY; i <= endY; i++)
+            {
+                for (int j = startX; j <= endX; j++)
+                {
+                    if (i >= 0 && i < 20 && j >= 0 && j < 20)
+                    {
+                        MouseEventArgs fakeClick = new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0);
+                        BotaoClicado(buttons[i, j], fakeClick);
+                    }
+                }
+            }
+
+        }
+
     }
 }
