@@ -11,8 +11,15 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        int[,] matriz = new int[20, 20];
-        Button[,] buttons = new Button[20, 20];
+        int gridSize = 30;
+        int gridSizeLimit;
+
+        //int[,] matriz = new int[20, 20];
+        //Button[,] buttons = new Button[20, 20];
+
+        int[,] matriz;
+        Button[,] buttons;
+
         int contador, contadorBombas;
 
         const string colorOne = "#E5C29F"; // skin lighter
@@ -24,11 +31,13 @@ namespace WindowsFormsApplication1
         Color colorThird;
         Color colorFourth;
 
+
         int tamanhoBtnAndSpace = 40;
         int spaceBetweenBtns = 32;
 
         public Form1()
         {
+            gridSizeLimit = gridSize - 1;
 
             InitializeComponent();
             colorFirst = ColorTranslator.FromHtml(colorOne);
@@ -44,17 +53,21 @@ namespace WindowsFormsApplication1
         {
             Random random = new Random();
 
-            for (int i = 0; i < 20; i++)
+            matriz = new int[gridSize, gridSize];
+            buttons = new Button[gridSize, gridSize];
+
+
+            for (int i = 0; i < gridSize; i++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < gridSize; j++)
                 {
                     matriz[i, j] = random.Next(0, 5);
                 }
             }
 
-            for (int a = 0; a < 20; a++)
+            for (int a = 0; a < gridSize; a++)
             {
-                for (int b = 0; b < 20; b++)
+                for (int b = 0; b < gridSize; b++)
                 {
                     int posX, posY;
 
@@ -92,9 +105,9 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < gridSize; i++)
             {
-                for (int j = 0; j < 20; j++)
+                for (int j = 0; j < gridSize; j++)
                 {
                     if (matriz[i, j] == 1)
                     {
@@ -109,11 +122,11 @@ namespace WindowsFormsApplication1
         private void verifyWinning()
         {
             contador = 0;
-            int contadorEspaçoFaltando = 20 * 20 - contadorBombas;
+            int contadorEspaçoFaltando = gridSize * gridSize - contadorBombas;
 
-            for (int i = 0; i <= 19; i++)
+            for (int i = 0; i <= gridSizeLimit; i++)
             {
-                for (int j = 0; j <= 19; j++)
+                for (int j = 0; j <= gridSizeLimit; j++)
                 {
 
                     if (buttons[i, j].ForeColor == Color.Black)
@@ -249,7 +262,7 @@ namespace WindowsFormsApplication1
             {
                 for (int j = posicaoY - 1; j < posicaoY + 2; j++)
                 {
-                    if (i < 0 || i > 19 || j < 0 || j > 19)
+                    if (i < 0 || i > gridSizeLimit || j < 0 || j > gridSizeLimit)
                     {
                         return;
                     }
@@ -296,9 +309,9 @@ namespace WindowsFormsApplication1
             }
 
             int startY = (posicaoY == 0) ? 0 : posicaoY - 1;
-            int endY = (posicaoY == 19) ? 19 : posicaoY + 1;
+            int endY = (posicaoY == gridSizeLimit) ? gridSizeLimit : posicaoY + 1;
             int startX = (posicaoX == 0) ? 0 : posicaoX - 1;
-            int endX = (posicaoX == 19) ? 19 : posicaoX + 1;
+            int endX = (posicaoX == gridSizeLimit) ? gridSizeLimit : posicaoX + 1;
 
             for (int i = startY; i <= endY; i++)
             {
@@ -325,9 +338,9 @@ namespace WindowsFormsApplication1
             }
 
             int startY = (posicaoY == 0) ? 0 : posicaoY - 1;
-            int endY = (posicaoY == 19) ? 19 : posicaoY + 1;
+            int endY = (posicaoY == gridSizeLimit) ? gridSizeLimit : posicaoY + 1;
             int startX = (posicaoX == 0) ? 0 : posicaoX - 1;
-            int endX = (posicaoX == 19) ? 19 : posicaoX + 1;
+            int endX = (posicaoX == gridSizeLimit) ? gridSizeLimit : posicaoX + 1;
 
             for (int i = startY; i <= endY; i++)
             {
@@ -345,15 +358,15 @@ namespace WindowsFormsApplication1
         private void middleClickAction(int posicaoY, int posicaoX)
         {
             int startY = (posicaoY == 0) ? 0 : posicaoY - 1;
-            int endY = (posicaoY == 19) ? 19 : posicaoY + 1;
+            int endY = (posicaoY == gridSizeLimit) ? gridSizeLimit : posicaoY + 1;
             int startX = (posicaoX == 0) ? 0 : posicaoX - 1;
-            int endX = (posicaoX == 19) ? 19 : posicaoX + 1;
+            int endX = (posicaoX == gridSizeLimit) ? gridSizeLimit : posicaoX + 1;
 
             for (int i = startY; i <= endY; i++)
             {
                 for (int j = startX; j <= endX; j++)
                 {
-                    if (i >= 0 && i < 20 && j >= 0 && j < 20)
+                    if (i >= 0 && i < gridSize && j >= 0 && j < gridSize)
                     {
                         MouseEventArgs fakeClick = new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0);
                         BotaoClicado(buttons[i, j], fakeClick);
