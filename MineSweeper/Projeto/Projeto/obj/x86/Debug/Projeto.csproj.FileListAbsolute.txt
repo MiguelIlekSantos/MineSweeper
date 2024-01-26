@@ -30,3 +30,4 @@ C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projet
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
+C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.FormInicio.resources

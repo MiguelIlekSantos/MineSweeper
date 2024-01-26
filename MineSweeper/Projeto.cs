@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        int gridSize = 30;
+        int gridSize;
         int gridSizeLimit;
 
         //int[,] matriz = new int[20, 20];
@@ -35,11 +35,36 @@ namespace WindowsFormsApplication1
         int tamanhoBtnAndSpace = 40;
         int spaceBetweenBtns = 32;
 
-        public Form1()
+        public Form1(int gridSize)
         {
+            InitializeComponent();
+
+            int novaLargura = tamanhoBtnAndSpace * gridSize;
+
+            if (gridSize == 10)
+            {
+                this.Width = novaLargura - 10;
+                this.Height = novaLargura - 10;
+            }
+            else if (gridSize == 15)
+            {
+                this.Width = novaLargura - 60;
+                this.Height = novaLargura - 60;
+            }
+            else if (gridSize == 20)
+            {
+                this.Width = novaLargura - 110;
+                this.Height = novaLargura - 100;
+            }
+            else if (gridSize == 25)
+            {
+                this.Width = novaLargura - 140;
+                this.Height = novaLargura - 140;
+            }
+
+            this.gridSize = gridSize;
             gridSizeLimit = gridSize - 1;
 
-            InitializeComponent();
             colorFirst = ColorTranslator.FromHtml(colorOne);
             colorSecond = ColorTranslator.FromHtml(colorTwo);
             colorThird = ColorTranslator.FromHtml(colorThree);
@@ -51,6 +76,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             Random random = new Random();
 
             matriz = new int[gridSize, gridSize];
@@ -61,7 +87,7 @@ namespace WindowsFormsApplication1
             {
                 for (int j = 0; j < gridSize; j++)
                 {
-                    matriz[i, j] = random.Next(0, 5);
+                    matriz[i, j] = random.Next(0, 6);
                 }
             }
 
@@ -142,11 +168,15 @@ namespace WindowsFormsApplication1
                 win = MessageBox.Show("Parabéns você venceu.\n Deseja recomeçar ?", "Vitória", MessageBoxButtons.YesNo);
                 if (win == DialogResult.Yes)
                 {
-                    Application.Restart();
+                    //Application.Restart();
+                    Form1 newGame = new Form1(gridSize);
+                    newGame.Show();
+                    this.Close();  
                 }
                 else
                 {
-                    Application.Exit();
+                    Program.MainFormInicio.Show();
+                    this.Hide();
                 }
             }
 
@@ -193,11 +223,15 @@ namespace WindowsFormsApplication1
                     resposta = MessageBox.Show("Você clicou em uma bomba.\n Deseja recomeçar ?", "Derrota", MessageBoxButtons.YesNo);
                     if (resposta == DialogResult.Yes)
                     {
-                        Application.Restart();
+                        //Application.Restart();
+                        Form1 newGame = new Form1(gridSize);
+                        newGame.Show();
+                        this.Close();
                     }
                     else
-                    {
-                        Application.Exit();
+                    {   
+                        Program.MainFormInicio.Show();
+                        this.Hide();
                     }
                 }
                 else if (((Button)sender).Text != "-1" && ((Button)sender).Text != " ")
