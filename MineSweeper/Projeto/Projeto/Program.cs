@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form1 form1 = new Form1(5);
+            Form1 form1 = new Form1(10, "Chrome");
             FormInicio formInicio = new FormInicio(form1);
 
             MainFormInicio = formInicio;

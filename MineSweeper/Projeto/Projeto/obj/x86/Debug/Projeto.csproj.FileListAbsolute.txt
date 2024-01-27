@@ -31,3 +31,12 @@ C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projet
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
 C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.FormInicio.resources
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\Projeto.exe
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\Projeto.pdb
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.FormInicio.resources
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache

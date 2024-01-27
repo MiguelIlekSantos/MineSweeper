@@ -13,31 +13,63 @@ namespace WindowsFormsApplication1
     {
         int gridSize;
         int gridSizeLimit;
-
-        //int[,] matriz = new int[20, 20];
-        //Button[,] buttons = new Button[20, 20];
-
         int[,] matriz;
         Button[,] buttons;
-
         int contador, contadorBombas;
+        string colorChoice;
 
-        const string colorOne = "#E5C29F"; // skin lighter
-        const string colorTwo = "#D7B899"; // skin darker 
-        const string colorThree = "#9be014"; //dark green
-        const string colorFour = "#BFE17D";  //light green
         Color colorFirst;
         Color colorSecond;
         Color colorThird;
         Color colorFourth;
-
+        Color colorFifth;
+        Color colorSixth;
 
         int tamanhoBtnAndSpace = 40;
         int spaceBetweenBtns = 32;
 
-        public Form1(int gridSize)
+        public Form1(int gridSize, string colorChoice)
         {
             InitializeComponent();
+
+            Dictionary<string, string> Chrome = new Dictionary<string, string>
+            {
+                { "colorOne", "#E5C29F" }, // skin lighter
+                { "colorTwo", "#D7B899" }, // skin darker
+                { "colorThree", "#9be014" }, //dark green
+                { "colorFour", "#BFE17D" }, //light green
+                { "colorFive", "#FF0000" }, // red
+                { "colorSix", "#000000" } // black
+            };
+
+            Dictionary<string, string> Dark = new Dictionary<string, string>
+            {
+                { "colorOne", "#747575" }, // gray
+                { "colorTwo", "#747575" }, // gray
+                { "colorThree", "#000000" }, // black
+                { "colorFour", "#000000" }, // black
+                { "colorFive", "#6efaea" }, //aqua blue
+                { "colorSix", "#FFFFFF" } // white
+            };
+
+            Dictionary<string, string> coresFinal = new Dictionary<string, string>(); ;
+            this.colorChoice = colorChoice;
+
+            if (colorChoice == "Chrome")
+            {
+                coresFinal = Chrome;
+            }
+            else if (colorChoice == "Dark")
+            {
+                coresFinal = Dark;
+            }
+            ;
+            colorFirst = ColorTranslator.FromHtml(coresFinal["colorOne"]);
+            colorSecond = ColorTranslator.FromHtml(coresFinal["colorTwo"]);
+            colorThird = ColorTranslator.FromHtml(coresFinal["colorThree"]);
+            colorFourth = ColorTranslator.FromHtml(coresFinal["colorFour"]);
+            colorFifth = ColorTranslator.FromHtml(coresFinal["colorFive"]);
+            colorSixth = ColorTranslator.FromHtml(coresFinal["colorSix"]);
 
             int novaLargura = tamanhoBtnAndSpace * gridSize;
 
@@ -64,12 +96,6 @@ namespace WindowsFormsApplication1
 
             this.gridSize = gridSize;
             gridSizeLimit = gridSize - 1;
-
-            colorFirst = ColorTranslator.FromHtml(colorOne);
-            colorSecond = ColorTranslator.FromHtml(colorTwo);
-            colorThird = ColorTranslator.FromHtml(colorThree);
-            colorFourth = ColorTranslator.FromHtml(colorFour);
-
             this.Text = "Mine Whisper";
             this.Icon = new Icon("bomb.ico");
         }
@@ -155,7 +181,7 @@ namespace WindowsFormsApplication1
                 for (int j = 0; j <= gridSizeLimit; j++)
                 {
 
-                    if (buttons[i, j].ForeColor == Color.Black)
+                    if (buttons[i, j].ForeColor == colorSixth)
                     {
                         contador++;
                     }
@@ -168,10 +194,9 @@ namespace WindowsFormsApplication1
                 win = MessageBox.Show("Parabéns você venceu.\n Deseja recomeçar ?", "Vitória", MessageBoxButtons.YesNo);
                 if (win == DialogResult.Yes)
                 {
-                    //Application.Restart();
-                    Form1 newGame = new Form1(gridSize);
+                    Form1 newGame = new Form1(gridSize, colorChoice);
                     newGame.Show();
-                    this.Close();  
+                    this.Close();
                 }
                 else
                 {
@@ -191,9 +216,9 @@ namespace WindowsFormsApplication1
 
             if (e.Button == MouseButtons.Right)
             {
-                if (((Button)sender).ForeColor != Color.Black)
+                if (((Button)sender).ForeColor != colorSixth)
                 {
-                    if (((Button)sender).ForeColor == Color.Red)
+                    if (((Button)sender).ForeColor == colorFifth)
                     {
                         if (posicaoX % 2 == 0 && posicaoY % 2 != 0 || posicaoX % 2 == 1 && posicaoY % 2 == 0)
                         {
@@ -209,13 +234,13 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        ((Button)sender).ForeColor = Color.Red;
-                        ((Button)sender).BackColor = Color.Red;
+                        ((Button)sender).ForeColor = colorFifth;
+                        ((Button)sender).BackColor = colorFifth;
                     }
                 }
             }
 
-            if (e.Button == MouseButtons.Left && ((Button)sender).ForeColor != Color.Red)
+            if (e.Button == MouseButtons.Left && ((Button)sender).ForeColor != colorFifth)
             {
                 if (((Button)sender).Text == "-1")
                 {
@@ -223,13 +248,12 @@ namespace WindowsFormsApplication1
                     resposta = MessageBox.Show("Você clicou em uma bomba.\n Deseja recomeçar ?", "Derrota", MessageBoxButtons.YesNo);
                     if (resposta == DialogResult.Yes)
                     {
-                        //Application.Restart();
-                        Form1 newGame = new Form1(gridSize);
+                        Form1 newGame = new Form1(gridSize, colorChoice);
                         newGame.Show();
                         this.Close();
                     }
                     else
-                    {   
+                    {
                         Program.MainFormInicio.Show();
                         this.Hide();
                     }
@@ -239,12 +263,12 @@ namespace WindowsFormsApplication1
 
                     if (posicaoX % 2 == 0 && posicaoY % 2 != 0 || posicaoX % 2 == 1 && posicaoY % 2 == 0)
                     {
-                        ((Button)sender).ForeColor = Color.Black;
+                        ((Button)sender).ForeColor = colorSixth;
                         ((Button)sender).BackColor = colorFirst;
                     }
                     else
                     {
-                        ((Button)sender).ForeColor = Color.Black;
+                        ((Button)sender).ForeColor = colorSixth;
                         ((Button)sender).BackColor = colorSecond;
                     }
 
@@ -254,7 +278,7 @@ namespace WindowsFormsApplication1
                 else if (((Button)sender).Text == " ")
                 {
 
-                    ((Button)sender).ForeColor = Color.Black;
+                    ((Button)sender).ForeColor = colorSixth;
                     if (posicaoX % 2 == 0 && posicaoY % 2 != 0 || posicaoX % 2 == 1 && posicaoY % 2 == 0)
                     {
 
@@ -300,9 +324,9 @@ namespace WindowsFormsApplication1
                     {
                         return;
                     }
-                    if (buttons[i, j].ForeColor != Color.Black)
+                    if (buttons[i, j].ForeColor != colorSixth)
                     {
-                        buttons[i, j].ForeColor = Color.Black;
+                        buttons[i, j].ForeColor = colorSixth;
                         if (i % 2 == 0 && j % 2 != 0 || i % 2 == 1 && j % 2 == 0)
                         {
 
@@ -366,7 +390,7 @@ namespace WindowsFormsApplication1
         {
             int minearound = 0;
 
-            if (buttons[posicaoY, posicaoX].ForeColor == Color.Red)
+            if (buttons[posicaoY, posicaoX].ForeColor == colorFifth)
             {
                 return 0;
             }
@@ -380,7 +404,7 @@ namespace WindowsFormsApplication1
             {
                 for (int j = startX; j <= endX; j++)
                 {
-                    if (buttons[i, j].ForeColor == Color.Red)
+                    if (buttons[i, j].ForeColor == colorFifth)
                     {
                         minearound++;
                     }
