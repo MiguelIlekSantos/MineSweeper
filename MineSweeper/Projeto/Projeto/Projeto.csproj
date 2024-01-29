@@ -95,6 +95,39 @@
   <ItemGroup>
     <None Include="Resources\Chrome Color.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-tutorial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tutorial-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-tutorial %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botao-play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tutorial-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-tutorial1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bomb2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

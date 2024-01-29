@@ -121,7 +121,40 @@
   <data name="Dark Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dark Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="video-tutorial1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video-tutorial1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutorial-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorial-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chrome Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrome Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="video-tutorial (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video-tutorial (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutorial-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorial-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bomb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botao-play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botao-play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="play-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="video-tutorial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video-tutorial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bomb2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomb2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

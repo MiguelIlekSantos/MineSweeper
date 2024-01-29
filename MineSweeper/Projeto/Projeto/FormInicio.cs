@@ -13,39 +13,56 @@ namespace WindowsFormsApplication1
     {
         private Form1 form1;
 
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Focus();
+            this.KeyPreview = true;
+
+        }
+
         public FormInicio(Form1 form1)
         {
             this.form1 = form1;
 
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
 
             comboBox1.Items.Add("10");
             comboBox1.Items.Add("15");
             comboBox1.Items.Add("20");
             comboBox1.Items.Add("25");
 
-            comboBox2.Items.Add("Chrome");
-            comboBox2.Items.Add("Dark");
+            colorSchemeName.Items.Add("Chrome");
+            colorSchemeName.Items.Add("Dark");
+
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
+            if (comboBox1.SelectedItem == null || colorSchemeName.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, selecione uma opção em ambas as boxes.");
                 return;
             }
 
             int choiceComboBox1 = Convert.ToInt32(comboBox1.SelectedItem);
-            string choiceComboBox2 = Convert.ToString(comboBox2.SelectedItem);
+            string choiceComboBox2 = Convert.ToString(colorSchemeName.SelectedItem);
 
             Form1 form1 = new Form1(choiceComboBox1, choiceComboBox2);
             form1.Show();
-            this.Hide(); 
+
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string choiceComboBox2 = Convert.ToString(comboBox2.SelectedItem);
+            string choiceComboBox2 = Convert.ToString(colorSchemeName.SelectedItem);
 
             if(choiceComboBox2 == "Chrome"){
                 pictureBox2.Visible = true;
@@ -61,29 +78,21 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+        private void btnPlaySection_Click(object sender, EventArgs e)
+        {
+            playSection.Visible = true;
         }
 
-        private void FormInicio_Load(object sender, EventArgs e)
+        private void btnTutorialSection_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            playSection.Visible = false;
         }
 
 

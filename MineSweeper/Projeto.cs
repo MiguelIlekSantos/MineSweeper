@@ -17,6 +17,9 @@ namespace WindowsFormsApplication1
         Button[,] buttons;
         int contador, contadorBombas;
         string colorChoice;
+        int retry;
+        string tempoDeJogo;
+        bool jogoFinalizado = false;
 
         Color colorFirst;
         Color colorSecond;
@@ -24,9 +27,13 @@ namespace WindowsFormsApplication1
         Color colorFourth;
         Color colorFifth;
         Color colorSixth;
+        Color colorSeventh;
 
         int tamanhoBtnAndSpace = 40;
-        int spaceBetweenBtns = 32;
+
+
+        DateTime startTime;
+        Timer timer;
 
         public Form1(int gridSize, string colorChoice)
         {
@@ -36,10 +43,11 @@ namespace WindowsFormsApplication1
             {
                 { "colorOne", "#E5C29F" }, // skin lighter
                 { "colorTwo", "#D7B899" }, // skin darker
-                { "colorThree", "#9be014" }, //dark green
-                { "colorFour", "#BFE17D" }, //light green
+                { "colorThree", "#9be014" }, // dark green
+                { "colorFour", "#BFE17D" }, // light green
                 { "colorFive", "#FF0000" }, // red
-                { "colorSix", "#000000" } // black
+                { "colorSix", "#000000" }, // black
+                { "colorSeventh", "#f0f0f0" } // control
             };
 
             Dictionary<string, string> Dark = new Dictionary<string, string>
@@ -48,9 +56,12 @@ namespace WindowsFormsApplication1
                 { "colorTwo", "#747575" }, // gray
                 { "colorThree", "#000000" }, // black
                 { "colorFour", "#000000" }, // black
-                { "colorFive", "#6efaea" }, //aqua blue
-                { "colorSix", "#FFFFFF" } // white
+                { "colorFive", "#6efaea" }, // aqua blue
+                { "colorSix", "#FFFFFF" }, // white
+                { "colorSeventh", "#626363" } // gray
             };
+            
+
 
             Dictionary<string, string> coresFinal = new Dictionary<string, string>(); ;
             this.colorChoice = colorChoice;
@@ -63,15 +74,18 @@ namespace WindowsFormsApplication1
             {
                 coresFinal = Dark;
             }
-            ;
+
             colorFirst = ColorTranslator.FromHtml(coresFinal["colorOne"]);
             colorSecond = ColorTranslator.FromHtml(coresFinal["colorTwo"]);
             colorThird = ColorTranslator.FromHtml(coresFinal["colorThree"]);
             colorFourth = ColorTranslator.FromHtml(coresFinal["colorFour"]);
             colorFifth = ColorTranslator.FromHtml(coresFinal["colorFive"]);
             colorSixth = ColorTranslator.FromHtml(coresFinal["colorSix"]);
+            colorSeventh = ColorTranslator.FromHtml(coresFinal["colorSeventh"]);
 
             int novaLargura = tamanhoBtnAndSpace * gridSize;
+
+
 
             if (gridSize == 10)
             {
@@ -98,10 +112,29 @@ namespace WindowsFormsApplication1
             gridSizeLimit = gridSize - 1;
             this.Text = "Mine Whisper";
             this.Icon = new Icon("bomb.ico");
+
+            timer = new Timer();
+            timer.Interval = 1000; 
+            timer.Tick += Timer_Tick;
+            startTime = DateTime.Now;
+            timer.Start();
+
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan elapsed = DateTime.Now - startTime;
+            clock.Text = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds);
+            tempoDeJogo = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds); 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Focus();
+            this.KeyPreview = true;
+
 
             Random random = new Random();
 
@@ -117,14 +150,15 @@ namespace WindowsFormsApplication1
                 }
             }
 
+            int totalWidth = tamanhoBtnAndSpace * gridSize;
+            int totalHeight = tamanhoBtnAndSpace * gridSize;
+
             for (int a = 0; a < gridSize; a++)
             {
                 for (int b = 0; b < gridSize; b++)
                 {
-                    int posX, posY;
-
-                    posX = 10 + spaceBetweenBtns * a;
-                    posY = 10 + spaceBetweenBtns * b;
+                    int posX = (this.Width - totalWidth) / 2 + tamanhoBtnAndSpace * a;
+                    int posY = (this.Height - totalHeight) / 2 + tamanhoBtnAndSpace * b;
 
 
                     Button novoBotao = new Button();
@@ -146,13 +180,13 @@ namespace WindowsFormsApplication1
                     }
 
                     novoBotao.Size = new System.Drawing.Size(tamanhoBtnAndSpace, tamanhoBtnAndSpace);
-
                     novoBotao.Location = new System.Drawing.Point(posX, posY);
                     novoBotao.MouseDown += new MouseEventHandler(BotaoClicado);
                     novoBotao.Tag = new Coordenadas { X = a, Y = b };
                     bool isBold = novoBotao.Font.Bold;
                     novoBotao.Font = new Font(novoBotao.Font, novoBotao.Font.Style | FontStyle.Bold);
                     Controls.Add(novoBotao);
+
                     buttons[a, b] = novoBotao;
                 }
             }
@@ -170,9 +204,19 @@ namespace WindowsFormsApplication1
             }
 
         }
-
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
         private void verifyWinning()
         {
+            if(jogoFinalizado){
+                return;
+            }
+
             contador = 0;
             int contadorEspaçoFaltando = gridSize * gridSize - contadorBombas;
 
@@ -190,16 +234,22 @@ namespace WindowsFormsApplication1
 
             if (contador == contadorEspaçoFaltando)
             {
+                timer.Stop();
+                jogoFinalizado = true;
+
                 DialogResult win;
-                win = MessageBox.Show("Parabéns você venceu.\n Deseja recomeçar ?", "Vitória", MessageBoxButtons.YesNo);
+
+                win = MessageBox.Show("Parabéns você venceu.\nSeu tempo foi : " + tempoDeJogo + "\n Deseja recomeçar ?", "Vitória", MessageBoxButtons.YesNo);
                 if (win == DialogResult.Yes)
                 {
                     Form1 newGame = new Form1(gridSize, colorChoice);
                     newGame.Show();
+                    retry = 1;
                     this.Close();
                 }
                 else
                 {
+                    retry = 0;
                     Program.MainFormInicio.Show();
                     this.Hide();
                 }
@@ -250,10 +300,12 @@ namespace WindowsFormsApplication1
                     {
                         Form1 newGame = new Form1(gridSize, colorChoice);
                         newGame.Show();
+                        retry = 1;
                         this.Close();
                     }
                     else
                     {
+                        retry = 0;
                         Program.MainFormInicio.Show();
                         this.Hide();
                     }
@@ -433,6 +485,7 @@ namespace WindowsFormsApplication1
             }
 
         }
+
 
     }
 }
