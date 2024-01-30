@@ -108,6 +108,13 @@ namespace WindowsFormsApplication1
                 this.Height = novaLargura - 140;
             }
 
+            if(gridSize >= 16 && gridSize < 25){
+                tamanhoBtnAndSpace = 30;
+            }
+            else if (gridSize == 25)
+            {
+                tamanhoBtnAndSpace = 25;
+            }
             this.gridSize = gridSize;
             gridSizeLimit = gridSize - 1;
             this.Text = "Mine Whisper";
@@ -294,6 +301,7 @@ namespace WindowsFormsApplication1
             {
                 if (((Button)sender).Text == "-1")
                 {
+                    timer.Stop();
                     DialogResult resposta;
                     resposta = MessageBox.Show("Você clicou em uma bomba.\n Deseja recomeçar ?", "Derrota", MessageBoxButtons.YesNo);
                     if (resposta == DialogResult.Yes)

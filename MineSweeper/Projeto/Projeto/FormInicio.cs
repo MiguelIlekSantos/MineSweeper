@@ -85,15 +85,6 @@ namespace WindowsFormsApplication1
                 this.Close();
             }
         }
-        private void btnPlaySection_Click(object sender, EventArgs e)
-        {
-            playSection.Visible = true;
-        }
-
-        private void btnTutorialSection_Click(object sender, EventArgs e)
-        {
-            playSection.Visible = false;
-        }
 
 
     }
