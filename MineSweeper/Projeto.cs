@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Projeto : Form
     {
         int gridSize;
         int gridSizeLimit;
@@ -29,15 +29,29 @@ namespace WindowsFormsApplication1
         Color colorSixth;
         Color colorSeventh;
 
-        int tamanhoBtnAndSpace = 40;
-
 
         DateTime startTime;
         Timer timer;
 
-        public Form1(int gridSize, string colorChoice)
+        public Projeto(int gridSize, string colorChoice)
         {
             InitializeComponent();
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Focus();
+            this.KeyPreview = true;
+            this.Show();
+
+            int tamanhoBtnAndSpace;
+            
+            if (gridSize >= 20)
+            {
+                tamanhoBtnAndSpace = 30;
+            }
+            else {
+                tamanhoBtnAndSpace = 40;
+            }
 
             Dictionary<string, string> Chrome = new Dictionary<string, string>
             {
@@ -60,7 +74,7 @@ namespace WindowsFormsApplication1
                 { "colorSix", "#FFFFFF" }, // white
                 { "colorSeventh", "#626363" } // gray
             };
-            
+
 
 
             Dictionary<string, string> coresFinal = new Dictionary<string, string>(); ;
@@ -85,62 +99,15 @@ namespace WindowsFormsApplication1
 
             int novaLargura = tamanhoBtnAndSpace * gridSize;
 
-
-
-            if (gridSize == 10)
-            {
-                this.Width = novaLargura - 10;
-                this.Height = novaLargura - 10;
-            }
-            else if (gridSize == 15)
-            {
-                this.Width = novaLargura - 60;
-                this.Height = novaLargura - 60;
-            }
-            else if (gridSize == 20)
-            {
-                this.Width = novaLargura - 110;
-                this.Height = novaLargura - 100;
-            }
-            else if (gridSize == 25)
-            {
-                this.Width = novaLargura - 140;
-                this.Height = novaLargura - 140;
-            }
-
-            if(gridSize >= 16 && gridSize < 25){
-                tamanhoBtnAndSpace = 30;
-            }
-            else if (gridSize == 25)
-            {
-                tamanhoBtnAndSpace = 25;
-            }
             this.gridSize = gridSize;
             gridSizeLimit = gridSize - 1;
             this.Text = "Mine Whisper";
-            this.Icon = new Icon("bomb.ico");
 
             timer = new Timer();
-            timer.Interval = 1000; 
+            timer.Interval = 1000;
             timer.Tick += Timer_Tick;
             startTime = DateTime.Now;
             timer.Start();
-
-        }
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            TimeSpan elapsed = DateTime.Now - startTime;
-            clock.Text = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds);
-            tempoDeJogo = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds); 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Focus();
-            this.KeyPreview = true;
 
 
             Random random = new Random();
@@ -210,6 +177,14 @@ namespace WindowsFormsApplication1
                 }
             }
 
+
+
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan elapsed = DateTime.Now - startTime;
+            clock.Text = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds);
+            tempoDeJogo = string.Format("{0:D2}:{1:D2}:{2:D2}", elapsed.Hours, elapsed.Minutes, elapsed.Seconds);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -220,7 +195,8 @@ namespace WindowsFormsApplication1
         }
         private void verifyWinning()
         {
-            if(jogoFinalizado){
+            if (jogoFinalizado)
+            {
                 return;
             }
 
@@ -249,7 +225,7 @@ namespace WindowsFormsApplication1
                 win = MessageBox.Show("Parabéns você venceu.\nSeu tempo foi : " + tempoDeJogo + "\n Deseja recomeçar ?", "Vitória", MessageBoxButtons.YesNo);
                 if (win == DialogResult.Yes)
                 {
-                    Form1 newGame = new Form1(gridSize, colorChoice);
+                    Projeto newGame = new Projeto(gridSize, colorChoice);
                     newGame.Show();
                     retry = 1;
                     this.Close();
@@ -257,7 +233,6 @@ namespace WindowsFormsApplication1
                 else
                 {
                     retry = 0;
-                    Program.MainFormInicio.Show();
                     this.Hide();
                 }
             }
@@ -301,12 +276,11 @@ namespace WindowsFormsApplication1
             {
                 if (((Button)sender).Text == "-1")
                 {
-                    timer.Stop();
                     DialogResult resposta;
                     resposta = MessageBox.Show("Você clicou em uma bomba.\n Deseja recomeçar ?", "Derrota", MessageBoxButtons.YesNo);
                     if (resposta == DialogResult.Yes)
                     {
-                        Form1 newGame = new Form1(gridSize, colorChoice);
+                        Projeto newGame = new Projeto(gridSize, colorChoice);
                         newGame.Show();
                         retry = 1;
                         this.Close();
@@ -314,7 +288,6 @@ namespace WindowsFormsApplication1
                     else
                     {
                         retry = 0;
-                        Program.MainFormInicio.Show();
                         this.Hide();
                     }
                 }

@@ -1,8 +1,0 @@
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\bin\Release\Projeto.exe
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\bin\Release\Projeto.pdb
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\WindowsFormsApplication1.Form1.resources
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\WindowsFormsApplication1.FormInicio.resources
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\Projeto.csproj.GenerateResource.Cache
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\Projeto.exe
-C:\Users\migue\OneDrive\Documentos\GitHub\MineSweeper\MineSweeper\Projeto\Projeto\obj\x86\Release\Projeto.pdb

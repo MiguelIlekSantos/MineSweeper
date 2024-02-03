@@ -9,22 +9,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class FormInicio : Form
+    public partial class Page1 : Form
     {
-        private Form1 form1;
 
-        private void FormInicio_Load(object sender, EventArgs e)
+        private void Page1_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Focus();
-            this.KeyPreview = true;
 
         }
 
-        public FormInicio(Form1 form1)
+        public Page1()
         {
-            this.form1 = form1;
+            
 
             InitializeComponent();
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
@@ -37,7 +32,7 @@ namespace WindowsFormsApplication1
             colorSchemeName.Items.Add("Chrome");
             colorSchemeName.Items.Add("Dark");
 
-            
+
 
         }
 
@@ -52,29 +47,13 @@ namespace WindowsFormsApplication1
             int choiceComboBox1 = Convert.ToInt32(comboBox1.SelectedItem);
             string choiceComboBox2 = Convert.ToString(colorSchemeName.SelectedItem);
 
-            Form1 form1 = new Form1(choiceComboBox1, choiceComboBox2);
+            Projeto form1 = new Projeto(choiceComboBox1, choiceComboBox2);
+            form1.KeyDown += new KeyEventHandler(Form1_KeyDown);
+            form1.WindowState = FormWindowState.Maximized;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.Focus();
+            form1.KeyPreview = true;
             form1.Show();
-
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string choiceComboBox2 = Convert.ToString(colorSchemeName.SelectedItem);
-
-            if(choiceComboBox2 == "Chrome"){
-                pictureBox2.Visible = true;
-                pictureBox1.Visible = false;
-                colorSchemeName.Text = "Chrome";
-            }
-            else if (choiceComboBox2 == "Dark")
-            {
-                pictureBox1.Visible = true;
-                pictureBox2.Visible = false;
-                colorSchemeName.Text = "Dark";
-            }
 
         }
 
@@ -85,6 +64,24 @@ namespace WindowsFormsApplication1
                 this.Close();
             }
         }
+
+        private void colorSchemeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string choiceComboBox2 = Convert.ToString(colorSchemeName.SelectedItem);
+
+            if (choiceComboBox2 == "Chrome")
+            {
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = false;
+            }
+            else if (choiceComboBox2 == "Dark")
+            {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = true;
+            }
+        }
+
+
 
 
     }

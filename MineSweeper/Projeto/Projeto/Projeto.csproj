@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FBDE000E-665D-4AE2-B754-6C1796C2DFC2}</ProjectGuid>
+    <ProjectGuid>{692A5E37-CE51-4BF4-96C6-CCF32255F55B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication1</RootNamespace>
@@ -46,63 +46,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Projeto.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="..\..\Projeto.Designer.cs">
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto.Designer.cs">
       <DependentUpon>Projeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page1.Designer.cs">
+      <DependentUpon>Page1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page2.Designer.cs">
+      <DependentUpon>Page2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormInicio.Designer.cs">
-      <DependentUpon>FormInicio.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="..\..\Projeto.resx">
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto.resx">
       <DependentUpon>Projeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page1.resx">
+      <DependentUpon>Page1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page2.resx">
+      <DependentUpon>Page2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInicio.resx">
-      <DependentUpon>FormInicio.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\back-window-one.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dark Color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Chrome Color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\video-tutorial.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tutorial-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\play-icon.png" />
@@ -111,22 +111,13 @@
     <None Include="Resources\video-tutorial %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\botao-play.png" />
+    <None Include="Resources\bomb.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tutorial-icon1.png" />
+    <None Include="Resources\Chrome Color.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\video-tutorial1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\play-icon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bomb2.png" />
+    <None Include="Resources\Dark Color.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

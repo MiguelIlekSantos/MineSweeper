@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Projeto
+    partial class Page2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clock = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // clock
-            // 
-            this.clock.AutoSize = true;
-            this.clock.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clock.Location = new System.Drawing.Point(100, 116);
-            this.clock.Name = "clock";
-            this.clock.Size = new System.Drawing.Size(94, 28);
-            this.clock.TabIndex = 3;
-            this.clock.Text = "00:00:00";
-            // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 68);
+            this.label1.Location = new System.Drawing.Point(377, 292);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Current Time";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Page2";
             // 
-            // Projeto
+            // Page2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 553);
-            this.Controls.Add(this.clock);
+            this.ClientSize = new System.Drawing.Size(793, 596);
             this.Controls.Add(this.label1);
-            this.Name = "Projeto";
-            this.Text = "Form2";
+            this.Name = "Page2";
+            this.Text = "|";
+            this.Load += new System.EventHandler(this.Page2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,7 +57,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label clock;
         private System.Windows.Forms.Label label1;
     }
 }

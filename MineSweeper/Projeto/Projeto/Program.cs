@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
     static class Program
     {
 
-        public static FormInicio MainFormInicio { get; private set; }
+        public static Page1 MainFormInicio { get; private set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,14 +17,12 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Form1 form1 = new Form1(10, "Chrome");
-            FormInicio formInicio = new FormInicio(form1);
+            Form1 form1 = new Form1();
+            Page1 formInicio = new Page1();
 
             MainFormInicio = formInicio;
 
-            Application.Run(formInicio);
+            Application.Run(form1);
         }
-
     }
 }
