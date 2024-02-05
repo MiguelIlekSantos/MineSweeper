@@ -76,6 +76,13 @@ namespace WindowsFormsApplication1
             miniWindows.Controls.Remove(page2);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         
 
 

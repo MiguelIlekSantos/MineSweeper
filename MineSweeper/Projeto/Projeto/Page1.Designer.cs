@@ -83,7 +83,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei Light", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(344, 430);
+            this.button1.Location = new System.Drawing.Point(342, 433);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 79);
             this.button1.TabIndex = 10;
@@ -139,7 +139,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "Page1";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Page1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

@@ -12,10 +12,6 @@ namespace WindowsFormsApplication1
     public partial class Page1 : Form
     {
 
-        private void Page1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public Page1()
         {

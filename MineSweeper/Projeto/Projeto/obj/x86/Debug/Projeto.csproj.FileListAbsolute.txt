@@ -9,3 +9,24 @@ G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Win
 G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
 G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.exe
 G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Interop.WMPLib.dll
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\AxInterop.WMPLib.dll
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.ResolveComReference.cache
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\Interop.WMPLib.dll
+G:\O meu disco\USB files\LPR 11 ano\C#\Projeto\Projeto\Projeto\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.ResolveComReference.cache
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\bin\Debug\Projeto.exe
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\bin\Debug\Projeto.pdb
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\bin\Debug\Interop.WMPLib.dll
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csprojResolveAssemblyReference.cache
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Projeto.resources
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Page1.resources
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Page2.resources
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\migue\OneDrive\Desktop\Projeto\Projeto\Projeto\obj\x86\Debug\Projeto.csproj.GenerateResource.Cache
